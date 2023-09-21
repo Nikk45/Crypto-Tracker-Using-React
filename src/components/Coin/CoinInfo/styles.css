@@ -1,0 +1,23 @@
+.coin-info-heading{
+    padding: 0 1.5rem;
+}
+
+.coin-info-desc{
+    padding: 0 1.5rem;
+    text-align: justify ;
+    cursor: pointer;
+    line-height: 1.4rem;
+}
+
+.coin-info-desc a{ 
+    text-decoration: underline;
+}
+
+.coin-info-desc a:hover{ 
+    color: var(--blue);
+}
+
+.sliced-para{
+    color:var(--grey);
+    margin-top: 1rem;
+}

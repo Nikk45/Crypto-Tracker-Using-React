@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --white : #fff;
+  --black : #111;
+  --blue : #3a88e9;
+  --grey : #888;
+  --darkgrey : #1b1b1b;
+  --green : #61c96f;
+  --red : #f94141;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[data-theme="dark"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
 }
+
+[data-theme="light"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #f3f3f3;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Inter', sans-serif; 
+}
+
+
+::selection{
+  background-color: rgb(40, 40, 196);
+  color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 3rem;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+img { 
+  -webkit-user-drag: none; 
+  -khtml-user-drag: none; 
+  -moz-user-drag: none; 
+  -o-user-drag: none; 
+}
+
+.dashboard{
+  min-height: 75vh;
+}
+
+
+.coin-details{
+  min-height: 90vh;
+}
+
+.coin-wrapper{
+  display: block;
+  background-color: var(--darkgrey);
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  padding: 0.2rem;
+}
+
+.chart-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+.compare-section{
+  min-height: 75vh;
+}
+
+.compare-details{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 3rem;
+  gap: 2.5rem;
+}
+
+.watch-list{
+  min-height: 74vh;
+}
+
+.no-items-watchlist{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-watchlist{
+  width: 10%;
+}
+
+@media only screen and (max-width:800px) {
+  .compare-details{
+    justify-content: space-between;
+  }
+}
+

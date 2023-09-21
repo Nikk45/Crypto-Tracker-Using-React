@@ -1,0 +1,125 @@
+.list-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.8rem;
+    padding: 0rem 2rem;
+}
+
+.list-row td{
+    text-align: left;
+    width: 18%;
+}
+
+.list-row:hover{
+    background-color: var(--darkgrey);
+    transition: all 0.3s;
+    border-radius: 1rem;
+}
+
+.total-volume, .market-cap{
+    font-size: 1rem;
+}
+
+.logo-td{
+    width: 3rem !important;
+    margin-right: 3rem;
+}
+
+.red-list{
+    min-width: 45px;
+}
+
+.td-center-align{
+    text-align: center;
+}
+
+.td-right-align{
+    text-align: right !important;
+}
+
+.mobile-total-volume{
+    display: none;
+}
+
+
+@media only screen and (max-width:1000px) {
+    .coin-logo-list{
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+
+    .coin-symbol-list{
+        font-size: 0.9rem;
+    }
+
+    .coin-name-list{
+        font-size: 0.7rem;
+    }
+
+    .price-chip-list, .red-list{
+        font-size: 0.9rem;
+    }
+
+    .td-center-align{
+        font-size: 0.9rem;
+    }
+
+    .td-right-align{
+        font-size: 0.8rem;
+    }
+    .market-cap-list{
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width:1000px) {
+} */
+
+@media only screen and (max-width:870px) {
+    .stock-icon{
+       display: none;
+    }
+
+    .list-table{
+        width: 100%;
+    }
+
+    .coin-logo-list{
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .coin-symbol-list{
+        font-size: 0.8rem;
+    }
+
+    .coin-name-list{
+        font-size: 0.6rem;
+    }
+
+    .price-chip-list, .red-list{
+        font-size: 0.8rem;
+        min-width: 30px;
+    }
+
+    .td-center-align{
+        font-size: 0.8rem;
+    }
+
+    .td-right-align{
+        font-size: 0.7.1rem;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    
+    .total-volume{
+        display: none;
+    }
+
+    .mobile-total-volume{
+        display: block;
+    }
+}
