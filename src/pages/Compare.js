@@ -69,8 +69,8 @@ function ComparePage() {
       const coinData = await getCoinData(event.target.value);
       coinObject(setCrypto2Data, coinData);
       const prices1 = await getCoinPrices(crypto1, days, priceType);
-      const prices2 = await getCoinPrices(crypto2, days, priceType);
-
+      const prices2 = await getCoinPrices(event.target.value, days, priceType);
+      settingChartData(setChartData, prices1, prices2);
       if (prices1 && prices2) {
         // settingChartData(setChartData, prices1)
         setIsLoading(false);
@@ -79,6 +79,9 @@ function ComparePage() {
       setCrypto1(event.target.value);
       const coinData = await getCoinData(event.target.value);
       coinObject(setCrypto1Data, coinData);
+      const prices1 = await getCoinPrices(event.target.value, days, priceType);
+      const prices2 = await getCoinPrices(crypto2, days, priceType);
+      settingChartData(setChartData, prices1, prices2);
       setIsLoading(false);
     }
   };
