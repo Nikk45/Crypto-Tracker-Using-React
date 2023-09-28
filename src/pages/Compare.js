@@ -79,7 +79,7 @@ function ComparePage() {
       setCrypto1(event.target.value);
       const coinData = await getCoinData(event.target.value);
       coinObject(setCrypto1Data, coinData);
-      setIsLoading(false);
+    //   setIsLoading(false);
     }
   };
 
